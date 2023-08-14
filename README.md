@@ -11,7 +11,7 @@ kissabot's cargo-generate-template
     ```
 3. Set up a sample project with this template
     ```
-    cargo generate --git https://github.com/KissaBot/kissa-rust-template --name my-project
-    cd my-project
+    cargo generate --git https://github.com/KissaBot/kissa-rust-template --name my-plugin
+    cd my-plugin
     ```
 `cargo install cargo-generate`
