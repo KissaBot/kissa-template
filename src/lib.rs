@@ -1,6 +1,17 @@
-use mlua::prelude::*;
-pub fn apply(lua: &Lua) -> LuaResult<()> {
-    lua.globals().set("_hello", "kissa")?;
-    lua.load(r#"console.log("hello",_hello)"#).exec()?;
-    Ok(())
+use kissa::{EventType, KissaPlugin, KissaResult, KissaSender, TestEventType};
+#[derive(Default)]
+struct Plugin;
+
+impl KissaPlugin for Plugin {
+    fn name(&self) -> &'static str {
+        "{{project-name}}"
+    }
+
+    fn on_event(
+        &self,
+        _event: &EventType,
+        _sender: KissaSender<EventType>,
+    ) -> KissaResult<EventType> {
+        Ok(())
+    }
 }
