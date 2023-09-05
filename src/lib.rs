@@ -1,4 +1,4 @@
-use kissa::{EventType, KissaPlugin, KissaResult, KissaSender, TestEventType};
+use kissa::{EventType, KissaPlugin, KissaResult, KissaSender};
 #[derive(Default)]
 struct Plugin;
 
