@@ -15,3 +15,8 @@ impl KissaPlugin for Plugin {
         Ok(())
     }
 }
+
+#[no_mangle]
+fn _create() -> Box<dyn KissaPlugin> {
+    Box::new(Plugin::default())
+}
